@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import Page from '../test-technique/Page';
+import Page from './Page';
 
 export default function RemercimentWrapper() {
   return (
