@@ -18,9 +18,9 @@ export default function RootLayout({
       lang="fr"
       className={`${poppins.variable} ${roboto_mono.variable} ${clash_display.variable} ${inter.variable}`}
     >
-      <body className={`bg-background flex h-screen flex-col antialiased`}>
+      <body id='body' className={`bg-background flex h-screen flex-col antialiased`}>
         <Header />
-        <main className="flex h-full flex-col overflow-scroll p-4">
+        <main className="flex h-full flex-col p-4">
           {children}
         </main>
       </body>

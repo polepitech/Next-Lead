@@ -6,6 +6,8 @@ import { Fugaz_One } from 'next/font/google';
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import { Question } from '@/components/Questions/Question';
+import { ScreenLoader } from '@/components/ScreenLoader';
+
 
 // Définir un schéma Zod pour valider les données du formulaire
 const questionnaireSchema = z.object({
@@ -25,6 +27,11 @@ export default function TestTechnique() {
       background: 'linear-gradient(to right, #06b6d4, #3b82f6)',
     });
   }, []);
+
+
+
+  /////// Fonction pour gérer la soumission du formulaire////
+  /////// Fonction pour gérer la soumission du formulaire////
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,10 +63,14 @@ export default function TestTechnique() {
     });
   };
 
+
+
   return (
-    <div id="body" className="h-fit flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700">
+    <div className="h-fit flex flex-col items-center justify-center ">
+      {/* <ScreenLoader /> */}
       <h1 className={`text-[10vw] text-center text-white font-black p-4 ${fuzz.className}`}>Questionnaire</h1>
-      <form onSubmit={handleSubmit} className="flex flex-col">
+      <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center w-full h-full">
+
         <Qcm
           titre={'Quel est le nom de votre futur alternant?'}
           name={'Qcm'}
@@ -71,25 +82,34 @@ export default function TestTechnique() {
         />
 
         <Question
-          titre={'Quel est votre domaine d\'étude?'}
+          titre={'Selon vous quelles langues parle votre futur alternant?'}
           name={'Question'}
-          type={'range'}
-          Choix1={'Informatique'}
-          Choix2={'Médecine'}
-          Choix3={'Droit'}
-          Choix4={'Arts'}
+          description={'Plusieurs choix possibles'}
+          type={'checkbox'}
+          Choix1={'Français'}
+          Choix2={'Anglais'}
+          Choix3={'Espagnol'}
+          Choix4={'Portugais'}
         />
         
         <Question
-          titre={'Quel est votre niveau de satisfaction?'}
+          titre={"Quel certification à t'il obtenu en tant qu'ingénieur du son?"}
           name={'radio'}
           type={'radio'}
-          Choix1={'1'}
-          Choix2={'2'}
-          Choix3={'3'}
-          Choix4={'4'}
+          Choix1={'📀'}
+          Choix2={'💿'}
+          Choix3={'💎'}
+        />
+
+        <Question
+          titre={'Comment avez vous trouvé ce questionnaire?'}
+          name={'range'}
+          type={'range'}
         />
         
+        <div className="spacing m-20"></div>
+        <p className="text-white text-center">Vérifiez bien vos réponses et envoyez le formulaire</p>
+
         {error && <p className="text-red-500 text-center">{error}</p>}
         <Button type="submit" className="m-10">Submit</Button>
       </form>
