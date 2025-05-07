@@ -25,6 +25,24 @@ export async function POST(req:Request){
             }
         });
     
-        return NextResponse.json({message: "Article créé"}, {status: 200});
+        return NextResponse.json({message: "Article créé", id: article.id}, {status: 200});
     }
  }
+
+export async function GET(req:Request){
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get('id');
+
+    if (!id) {
+        return NextResponse.json({ error: "ID manquant" }, { status: 400 });
+    }
+
+    const questionnaire = await prisma.questionnaire.findUnique({
+        where: { id: parseInt(id) },
+    });
+
+    if (!questionnaire) {
+        return NextResponse.json({ error: "Questionnaire non trouvé" }, { status: 404 });
+    }
+    return NextResponse.json({questionnaire}, {status: 200});
+}

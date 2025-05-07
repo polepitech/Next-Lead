@@ -6,7 +6,9 @@ import { Fugaz_One } from 'next/font/google';
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import { Question } from '@/components/Questions/Question';
-import { ScreenLoader } from '@/components/ScreenLoader';
+import { useRouter } from 'next/navigation';
+
+
 
 
 // Définir un schéma Zod pour valider les données du formulaire
@@ -26,6 +28,7 @@ const fuzz = Fugaz_One({
 
 export default function TestTechnique() {
   const [error, setError] = useState<string | null>(null);
+  const Router = useRouter();
 
   useEffect(() => {
     gsap.set('#body', {
@@ -38,7 +41,7 @@ export default function TestTechnique() {
   /////// Fonction pour gérer la soumission du formulaire////
   /////// Fonction pour gérer la soumission du formulaire////
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // récuperer formulaire
@@ -59,8 +62,10 @@ export default function TestTechnique() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
-    }).then((response) => {
+    }).then(async (response) => {
       if (response.ok) {
+        const data = await response.json();
+        Router.push('/remerciment?id=' + data.id);
         alert("Formulaire envoyé avec succès !");
       } else {
         alert("Erreur lors de l'envoi du formulaire.");
@@ -72,7 +77,6 @@ export default function TestTechnique() {
 
   return (
     <div className="h-fit flex flex-col items-center justify-center ">
-      {/* <ScreenLoader /> */}
       <h1 className={`text-[10vw] text-center text-white font-black p-4 ${fuzz.className}`}>Questionnaire</h1>
       <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center w-full h-full">
 
