@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-export default function Page() {
+export default function Remerciment() {
   const [questionnaire, setQuestionnaire] = React.useState<Record<string, string> | null>(null);
   const searchParams = useSearchParams();
   const id = searchParams.get('id');

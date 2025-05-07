@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
-import Page from './Page';
+import Remerciment from './page';
 
 export default function RemercimentWrapper() {
   return (
     <Suspense fallback={<p>Chargement...</p>}>
-      <Page />
+      <Remerciment />
     </Suspense>
   );
 }
