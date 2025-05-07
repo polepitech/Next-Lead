@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Nextlead – Test Technique
 
-## Getting Started
+Bienvenue sur le **Test Technique Nextlead**.
 
-First, run the development server:
+Ce repository est une **boilerplate** conçue pour vous faire gagner du temps.  
+Tous les outils nécessaires à sa réalisation ont été **préinstallés et préconfigurés** par nos soins.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Merci de lire attentivement les instructions ci-dessous pour bien démarrer.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🧰 Gestionnaire de paquets
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Nous vous recommandons d’utiliser **[`pnpm`](https://pnpm.io/)** pour ce projet.  
+Cependant, `yarn` ou `npm` restent compatibles.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 💡 Base de données
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ce projet utilise [**Neon**](https://neon.tech), un service PostgreSQL.  
+Il est **gratuit pour les tests techniques et petits projets**.  
+Si votre projet évolue fortement, des frais peuvent s’appliquer —  
+**mais dans le cadre de ce test, aucun risque de dépassement.**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Stack technique
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ce projet repose sur les technologies suivantes :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js 15.3.1](https://nextjs.org/)
+- [Prisma 6.7.0](https://www.prisma.io/)
+- [Neon Database](https://neon.tech/)
+- [Zod](https://zod.dev/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React 19](https://react.dev/)
+
+---
+
+## ✅ Prérequis
+
+- [Node.js](https://nodejs.org/) **>= 20.x**
+- [pnpm](https://pnpm.io/installation)
+
+---
+
+## 📦 Installation
+
+1. **Cloner le dépôt**
+   ```bash
+   git clone <url-du-repo>
+   cd <nom-du-dossier>
+   ```
+
+2. **Installer les dépendances**
+   ```bash
+   pnpm install
+   ```
+
+3. **Configurer la base de données Neon**
+   - Créez un compte sur [Neon](https://neon.tech/) et créez un nouveau projet PostgreSQL.
+   - Récupérez l’URL de connexion (format : `postgresql://...`)
+
+4. **Configurer les variables d’environnement**
+   ```bash
+   cp .env.example .env
+   ```
+   - Remplissez la variable `DATABASE_URL` avec l’URL de connexion Neon.
+
+5. **Initialiser la base de données avec Prisma**
+   ```bash
+   pnpm prisma migrate dev
+   ```
+
+6. **Démarrer le serveur**
+   ```bash
+   pnpm dev
+   ```
+
+---
+
+## 🧪 Scripts utiles
+
+- `pnpm dev` : Lance le serveur de développement
+- `pnpm prisma studio` : Ouvre Prisma Studio (ou consultez la base via Neon directement)
+
+---
+
+## 🗂️ Structure du projet
+
+- `/prisma` : Schéma Prisma et fichiers de migration (`Example` est à modifier)
+- `/components` : Composants UI globaux
+- `/app` : Pages Next.js
+- `/app/api` : API routes Next.js
+- `/lib` : Fonctions utilitaires
+- `/test-technique/_*` : Dossiers locaux aux composants liés à votre rendu
+
+---
+
+## 📚 Ressources utiles
+
+- [Next.js](https://nextjs.org/docs)
+- [Prisma](https://www.prisma.io/docs)
+- [Neon](https://neon.tech/docs/introduction)
+- [Zod](https://zod.dev/)
+- [shadcn/ui](https://ui.shadcn.com/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [React](https://react.dev/)
+
+---
+
+## 🙋 Besoin d'aide ?
+
+Si vous avez des questions, n’hésitez pas à contacter l’équipe **Nextlead**.
+Bonne chance pour votre test ! 💪
