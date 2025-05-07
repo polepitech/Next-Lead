@@ -99,9 +99,9 @@ exports.Prisma.ExampleScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.ArticleScalarFieldEnum = {
+exports.Prisma.QuestionnaireScalarFieldEnum = {
   id: 'id',
-  numero: 'numero',
+  Question1: 'Question1',
   createdAt: 'createdAt'
 };
 
@@ -118,7 +118,7 @@ exports.Prisma.QueryMode = {
 
 exports.Prisma.ModelName = {
   Example: 'Example',
-  Article: 'Article'
+  Questionnaire: 'Questionnaire'
 };
 /**
  * Create the Client
@@ -170,13 +170,13 @@ const config = {
       }
     }
   },
-  "inlineSchema": "model Example {\n  id        String   @id @default(uuid())\n  name      String\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\ngenerator client {\n  provider        = \"prisma-client-js\"\n  previewFeatures = [\"prismaSchemaFolder\", \"driverAdapters\"]\n  output          = \"../../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Article {\n  id        Int      @id @default(autoincrement())\n  numero    Int\n  createdAt DateTime @default(now())\n}\n",
-  "inlineSchemaHash": "a13abdcb4e1be22376db6c2beade7fb5c3f978ea738480c917cfe4a6cde50e3c",
+  "inlineSchema": "model Example {\n  id        String   @id @default(uuid())\n  name      String\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\ngenerator client {\n  provider        = \"prisma-client-js\"\n  previewFeatures = [\"prismaSchemaFolder\", \"driverAdapters\"]\n  output          = \"../../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Questionnaire {\n  id        Int      @id @default(autoincrement())\n  Question1 String\n  createdAt DateTime @default(now())\n}\n",
+  "inlineSchemaHash": "fa43a5afb92a858889bd0ac7f3050ce25ece137e485479a2cc6e245c231678f2",
   "copyEngine": true
 }
 config.dirname = '/'
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"Example\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Article\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"numero\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"Example\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Questionnaire\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"Question1\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.engineWasm = {
   getRuntime: async () => require('./query_engine_bg.js'),

@@ -19,10 +19,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
  */
 export type Example = $Result.DefaultSelection<Prisma.$ExamplePayload>
 /**
- * Model Article
+ * Model Questionnaire
  * 
  */
-export type Article = $Result.DefaultSelection<Prisma.$ArticlePayload>
+export type Questionnaire = $Result.DefaultSelection<Prisma.$QuestionnairePayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -160,14 +160,14 @@ export class PrismaClient<
   get example(): Prisma.ExampleDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.article`: Exposes CRUD operations for the **Article** model.
+   * `prisma.questionnaire`: Exposes CRUD operations for the **Questionnaire** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Articles
-    * const articles = await prisma.article.findMany()
+    * // Fetch zero or more Questionnaires
+    * const questionnaires = await prisma.questionnaire.findMany()
     * ```
     */
-  get article(): Prisma.ArticleDelegate<ExtArgs, ClientOptions>;
+  get questionnaire(): Prisma.QuestionnaireDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -609,7 +609,7 @@ export namespace Prisma {
 
   export const ModelName: {
     Example: 'Example',
-    Article: 'Article'
+    Questionnaire: 'Questionnaire'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -628,7 +628,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "example" | "article"
+      modelProps: "example" | "questionnaire"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -706,77 +706,77 @@ export namespace Prisma {
           }
         }
       }
-      Article: {
-        payload: Prisma.$ArticlePayload<ExtArgs>
-        fields: Prisma.ArticleFieldRefs
+      Questionnaire: {
+        payload: Prisma.$QuestionnairePayload<ExtArgs>
+        fields: Prisma.QuestionnaireFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.ArticleFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload> | null
+            args: Prisma.QuestionnaireFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.ArticleFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload>
+            args: Prisma.QuestionnaireFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload>
           }
           findFirst: {
-            args: Prisma.ArticleFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload> | null
+            args: Prisma.QuestionnaireFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.ArticleFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload>
+            args: Prisma.QuestionnaireFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload>
           }
           findMany: {
-            args: Prisma.ArticleFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload>[]
+            args: Prisma.QuestionnaireFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload>[]
           }
           create: {
-            args: Prisma.ArticleCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload>
+            args: Prisma.QuestionnaireCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload>
           }
           createMany: {
-            args: Prisma.ArticleCreateManyArgs<ExtArgs>
+            args: Prisma.QuestionnaireCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.ArticleCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload>[]
+            args: Prisma.QuestionnaireCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload>[]
           }
           delete: {
-            args: Prisma.ArticleDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload>
+            args: Prisma.QuestionnaireDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload>
           }
           update: {
-            args: Prisma.ArticleUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload>
+            args: Prisma.QuestionnaireUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload>
           }
           deleteMany: {
-            args: Prisma.ArticleDeleteManyArgs<ExtArgs>
+            args: Prisma.QuestionnaireDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.ArticleUpdateManyArgs<ExtArgs>
+            args: Prisma.QuestionnaireUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.ArticleUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload>[]
+            args: Prisma.QuestionnaireUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload>[]
           }
           upsert: {
-            args: Prisma.ArticleUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ArticlePayload>
+            args: Prisma.QuestionnaireUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$QuestionnairePayload>
           }
           aggregate: {
-            args: Prisma.ArticleAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateArticle>
+            args: Prisma.QuestionnaireAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateQuestionnaire>
           }
           groupBy: {
-            args: Prisma.ArticleGroupByArgs<ExtArgs>
-            result: $Utils.Optional<ArticleGroupByOutputType>[]
+            args: Prisma.QuestionnaireGroupByArgs<ExtArgs>
+            result: $Utils.Optional<QuestionnaireGroupByOutputType>[]
           }
           count: {
-            args: Prisma.ArticleCountArgs<ExtArgs>
-            result: $Utils.Optional<ArticleCountAggregateOutputType> | number
+            args: Prisma.QuestionnaireCountArgs<ExtArgs>
+            result: $Utils.Optional<QuestionnaireCountAggregateOutputType> | number
           }
         }
       }
@@ -869,7 +869,7 @@ export namespace Prisma {
   }
   export type GlobalOmitConfig = {
     example?: ExampleOmit
-    article?: ArticleOmit
+    questionnaire?: QuestionnaireOmit
   }
 
   /* Types for Logging */
@@ -1947,350 +1947,346 @@ export namespace Prisma {
 
 
   /**
-   * Model Article
+   * Model Questionnaire
    */
 
-  export type AggregateArticle = {
-    _count: ArticleCountAggregateOutputType | null
-    _avg: ArticleAvgAggregateOutputType | null
-    _sum: ArticleSumAggregateOutputType | null
-    _min: ArticleMinAggregateOutputType | null
-    _max: ArticleMaxAggregateOutputType | null
+  export type AggregateQuestionnaire = {
+    _count: QuestionnaireCountAggregateOutputType | null
+    _avg: QuestionnaireAvgAggregateOutputType | null
+    _sum: QuestionnaireSumAggregateOutputType | null
+    _min: QuestionnaireMinAggregateOutputType | null
+    _max: QuestionnaireMaxAggregateOutputType | null
   }
 
-  export type ArticleAvgAggregateOutputType = {
+  export type QuestionnaireAvgAggregateOutputType = {
     id: number | null
-    numero: number | null
   }
 
-  export type ArticleSumAggregateOutputType = {
+  export type QuestionnaireSumAggregateOutputType = {
     id: number | null
-    numero: number | null
   }
 
-  export type ArticleMinAggregateOutputType = {
+  export type QuestionnaireMinAggregateOutputType = {
     id: number | null
-    numero: number | null
+    Question1: string | null
     createdAt: Date | null
   }
 
-  export type ArticleMaxAggregateOutputType = {
+  export type QuestionnaireMaxAggregateOutputType = {
     id: number | null
-    numero: number | null
+    Question1: string | null
     createdAt: Date | null
   }
 
-  export type ArticleCountAggregateOutputType = {
+  export type QuestionnaireCountAggregateOutputType = {
     id: number
-    numero: number
+    Question1: number
     createdAt: number
     _all: number
   }
 
 
-  export type ArticleAvgAggregateInputType = {
+  export type QuestionnaireAvgAggregateInputType = {
     id?: true
-    numero?: true
   }
 
-  export type ArticleSumAggregateInputType = {
+  export type QuestionnaireSumAggregateInputType = {
     id?: true
-    numero?: true
   }
 
-  export type ArticleMinAggregateInputType = {
+  export type QuestionnaireMinAggregateInputType = {
     id?: true
-    numero?: true
+    Question1?: true
     createdAt?: true
   }
 
-  export type ArticleMaxAggregateInputType = {
+  export type QuestionnaireMaxAggregateInputType = {
     id?: true
-    numero?: true
+    Question1?: true
     createdAt?: true
   }
 
-  export type ArticleCountAggregateInputType = {
+  export type QuestionnaireCountAggregateInputType = {
     id?: true
-    numero?: true
+    Question1?: true
     createdAt?: true
     _all?: true
   }
 
-  export type ArticleAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Article to aggregate.
+     * Filter which Questionnaire to aggregate.
      */
-    where?: ArticleWhereInput
+    where?: QuestionnaireWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Articles to fetch.
+     * Determine the order of Questionnaires to fetch.
      */
-    orderBy?: ArticleOrderByWithRelationInput | ArticleOrderByWithRelationInput[]
+    orderBy?: QuestionnaireOrderByWithRelationInput | QuestionnaireOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: ArticleWhereUniqueInput
+    cursor?: QuestionnaireWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Articles from the position of the cursor.
+     * Take `±n` Questionnaires from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Articles.
+     * Skip the first `n` Questionnaires.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Articles
+     * Count returned Questionnaires
     **/
-    _count?: true | ArticleCountAggregateInputType
+    _count?: true | QuestionnaireCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: ArticleAvgAggregateInputType
+    _avg?: QuestionnaireAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: ArticleSumAggregateInputType
+    _sum?: QuestionnaireSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: ArticleMinAggregateInputType
+    _min?: QuestionnaireMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: ArticleMaxAggregateInputType
+    _max?: QuestionnaireMaxAggregateInputType
   }
 
-  export type GetArticleAggregateType<T extends ArticleAggregateArgs> = {
-        [P in keyof T & keyof AggregateArticle]: P extends '_count' | 'count'
+  export type GetQuestionnaireAggregateType<T extends QuestionnaireAggregateArgs> = {
+        [P in keyof T & keyof AggregateQuestionnaire]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateArticle[P]>
-      : GetScalarType<T[P], AggregateArticle[P]>
+        : GetScalarType<T[P], AggregateQuestionnaire[P]>
+      : GetScalarType<T[P], AggregateQuestionnaire[P]>
   }
 
 
 
 
-  export type ArticleGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ArticleWhereInput
-    orderBy?: ArticleOrderByWithAggregationInput | ArticleOrderByWithAggregationInput[]
-    by: ArticleScalarFieldEnum[] | ArticleScalarFieldEnum
-    having?: ArticleScalarWhereWithAggregatesInput
+  export type QuestionnaireGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: QuestionnaireWhereInput
+    orderBy?: QuestionnaireOrderByWithAggregationInput | QuestionnaireOrderByWithAggregationInput[]
+    by: QuestionnaireScalarFieldEnum[] | QuestionnaireScalarFieldEnum
+    having?: QuestionnaireScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: ArticleCountAggregateInputType | true
-    _avg?: ArticleAvgAggregateInputType
-    _sum?: ArticleSumAggregateInputType
-    _min?: ArticleMinAggregateInputType
-    _max?: ArticleMaxAggregateInputType
+    _count?: QuestionnaireCountAggregateInputType | true
+    _avg?: QuestionnaireAvgAggregateInputType
+    _sum?: QuestionnaireSumAggregateInputType
+    _min?: QuestionnaireMinAggregateInputType
+    _max?: QuestionnaireMaxAggregateInputType
   }
 
-  export type ArticleGroupByOutputType = {
+  export type QuestionnaireGroupByOutputType = {
     id: number
-    numero: number
+    Question1: string
     createdAt: Date
-    _count: ArticleCountAggregateOutputType | null
-    _avg: ArticleAvgAggregateOutputType | null
-    _sum: ArticleSumAggregateOutputType | null
-    _min: ArticleMinAggregateOutputType | null
-    _max: ArticleMaxAggregateOutputType | null
+    _count: QuestionnaireCountAggregateOutputType | null
+    _avg: QuestionnaireAvgAggregateOutputType | null
+    _sum: QuestionnaireSumAggregateOutputType | null
+    _min: QuestionnaireMinAggregateOutputType | null
+    _max: QuestionnaireMaxAggregateOutputType | null
   }
 
-  type GetArticleGroupByPayload<T extends ArticleGroupByArgs> = Prisma.PrismaPromise<
+  type GetQuestionnaireGroupByPayload<T extends QuestionnaireGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<ArticleGroupByOutputType, T['by']> &
+      PickEnumerable<QuestionnaireGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof ArticleGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof QuestionnaireGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], ArticleGroupByOutputType[P]>
-            : GetScalarType<T[P], ArticleGroupByOutputType[P]>
+              : GetScalarType<T[P], QuestionnaireGroupByOutputType[P]>
+            : GetScalarType<T[P], QuestionnaireGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type ArticleSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type QuestionnaireSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    numero?: boolean
+    Question1?: boolean
     createdAt?: boolean
-  }, ExtArgs["result"]["article"]>
+  }, ExtArgs["result"]["questionnaire"]>
 
-  export type ArticleSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type QuestionnaireSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    numero?: boolean
+    Question1?: boolean
     createdAt?: boolean
-  }, ExtArgs["result"]["article"]>
+  }, ExtArgs["result"]["questionnaire"]>
 
-  export type ArticleSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type QuestionnaireSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    numero?: boolean
+    Question1?: boolean
     createdAt?: boolean
-  }, ExtArgs["result"]["article"]>
+  }, ExtArgs["result"]["questionnaire"]>
 
-  export type ArticleSelectScalar = {
+  export type QuestionnaireSelectScalar = {
     id?: boolean
-    numero?: boolean
+    Question1?: boolean
     createdAt?: boolean
   }
 
-  export type ArticleOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "numero" | "createdAt", ExtArgs["result"]["article"]>
+  export type QuestionnaireOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "Question1" | "createdAt", ExtArgs["result"]["questionnaire"]>
 
-  export type $ArticlePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Article"
+  export type $QuestionnairePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Questionnaire"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      numero: number
+      Question1: string
       createdAt: Date
-    }, ExtArgs["result"]["article"]>
+    }, ExtArgs["result"]["questionnaire"]>
     composites: {}
   }
 
-  type ArticleGetPayload<S extends boolean | null | undefined | ArticleDefaultArgs> = $Result.GetResult<Prisma.$ArticlePayload, S>
+  type QuestionnaireGetPayload<S extends boolean | null | undefined | QuestionnaireDefaultArgs> = $Result.GetResult<Prisma.$QuestionnairePayload, S>
 
-  type ArticleCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<ArticleFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: ArticleCountAggregateInputType | true
+  type QuestionnaireCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<QuestionnaireFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: QuestionnaireCountAggregateInputType | true
     }
 
-  export interface ArticleDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Article'], meta: { name: 'Article' } }
+  export interface QuestionnaireDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Questionnaire'], meta: { name: 'Questionnaire' } }
     /**
-     * Find zero or one Article that matches the filter.
-     * @param {ArticleFindUniqueArgs} args - Arguments to find a Article
+     * Find zero or one Questionnaire that matches the filter.
+     * @param {QuestionnaireFindUniqueArgs} args - Arguments to find a Questionnaire
      * @example
-     * // Get one Article
-     * const article = await prisma.article.findUnique({
+     * // Get one Questionnaire
+     * const questionnaire = await prisma.questionnaire.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends ArticleFindUniqueArgs>(args: SelectSubset<T, ArticleFindUniqueArgs<ExtArgs>>): Prisma__ArticleClient<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends QuestionnaireFindUniqueArgs>(args: SelectSubset<T, QuestionnaireFindUniqueArgs<ExtArgs>>): Prisma__QuestionnaireClient<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Article that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Questionnaire that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {ArticleFindUniqueOrThrowArgs} args - Arguments to find a Article
+     * @param {QuestionnaireFindUniqueOrThrowArgs} args - Arguments to find a Questionnaire
      * @example
-     * // Get one Article
-     * const article = await prisma.article.findUniqueOrThrow({
+     * // Get one Questionnaire
+     * const questionnaire = await prisma.questionnaire.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends ArticleFindUniqueOrThrowArgs>(args: SelectSubset<T, ArticleFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ArticleClient<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends QuestionnaireFindUniqueOrThrowArgs>(args: SelectSubset<T, QuestionnaireFindUniqueOrThrowArgs<ExtArgs>>): Prisma__QuestionnaireClient<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Article that matches the filter.
+     * Find the first Questionnaire that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ArticleFindFirstArgs} args - Arguments to find a Article
+     * @param {QuestionnaireFindFirstArgs} args - Arguments to find a Questionnaire
      * @example
-     * // Get one Article
-     * const article = await prisma.article.findFirst({
+     * // Get one Questionnaire
+     * const questionnaire = await prisma.questionnaire.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends ArticleFindFirstArgs>(args?: SelectSubset<T, ArticleFindFirstArgs<ExtArgs>>): Prisma__ArticleClient<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends QuestionnaireFindFirstArgs>(args?: SelectSubset<T, QuestionnaireFindFirstArgs<ExtArgs>>): Prisma__QuestionnaireClient<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Article that matches the filter or
+     * Find the first Questionnaire that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ArticleFindFirstOrThrowArgs} args - Arguments to find a Article
+     * @param {QuestionnaireFindFirstOrThrowArgs} args - Arguments to find a Questionnaire
      * @example
-     * // Get one Article
-     * const article = await prisma.article.findFirstOrThrow({
+     * // Get one Questionnaire
+     * const questionnaire = await prisma.questionnaire.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends ArticleFindFirstOrThrowArgs>(args?: SelectSubset<T, ArticleFindFirstOrThrowArgs<ExtArgs>>): Prisma__ArticleClient<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends QuestionnaireFindFirstOrThrowArgs>(args?: SelectSubset<T, QuestionnaireFindFirstOrThrowArgs<ExtArgs>>): Prisma__QuestionnaireClient<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Articles that matches the filter.
+     * Find zero or more Questionnaires that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ArticleFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {QuestionnaireFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Articles
-     * const articles = await prisma.article.findMany()
+     * // Get all Questionnaires
+     * const questionnaires = await prisma.questionnaire.findMany()
      * 
-     * // Get first 10 Articles
-     * const articles = await prisma.article.findMany({ take: 10 })
+     * // Get first 10 Questionnaires
+     * const questionnaires = await prisma.questionnaire.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const articleWithIdOnly = await prisma.article.findMany({ select: { id: true } })
+     * const questionnaireWithIdOnly = await prisma.questionnaire.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends ArticleFindManyArgs>(args?: SelectSubset<T, ArticleFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends QuestionnaireFindManyArgs>(args?: SelectSubset<T, QuestionnaireFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Article.
-     * @param {ArticleCreateArgs} args - Arguments to create a Article.
+     * Create a Questionnaire.
+     * @param {QuestionnaireCreateArgs} args - Arguments to create a Questionnaire.
      * @example
-     * // Create one Article
-     * const Article = await prisma.article.create({
+     * // Create one Questionnaire
+     * const Questionnaire = await prisma.questionnaire.create({
      *   data: {
-     *     // ... data to create a Article
+     *     // ... data to create a Questionnaire
      *   }
      * })
      * 
      */
-    create<T extends ArticleCreateArgs>(args: SelectSubset<T, ArticleCreateArgs<ExtArgs>>): Prisma__ArticleClient<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends QuestionnaireCreateArgs>(args: SelectSubset<T, QuestionnaireCreateArgs<ExtArgs>>): Prisma__QuestionnaireClient<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Articles.
-     * @param {ArticleCreateManyArgs} args - Arguments to create many Articles.
+     * Create many Questionnaires.
+     * @param {QuestionnaireCreateManyArgs} args - Arguments to create many Questionnaires.
      * @example
-     * // Create many Articles
-     * const article = await prisma.article.createMany({
+     * // Create many Questionnaires
+     * const questionnaire = await prisma.questionnaire.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends ArticleCreateManyArgs>(args?: SelectSubset<T, ArticleCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends QuestionnaireCreateManyArgs>(args?: SelectSubset<T, QuestionnaireCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Articles and returns the data saved in the database.
-     * @param {ArticleCreateManyAndReturnArgs} args - Arguments to create many Articles.
+     * Create many Questionnaires and returns the data saved in the database.
+     * @param {QuestionnaireCreateManyAndReturnArgs} args - Arguments to create many Questionnaires.
      * @example
-     * // Create many Articles
-     * const article = await prisma.article.createManyAndReturn({
+     * // Create many Questionnaires
+     * const questionnaire = await prisma.questionnaire.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Articles and only return the `id`
-     * const articleWithIdOnly = await prisma.article.createManyAndReturn({
+     * // Create many Questionnaires and only return the `id`
+     * const questionnaireWithIdOnly = await prisma.questionnaire.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -2300,28 +2296,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends ArticleCreateManyAndReturnArgs>(args?: SelectSubset<T, ArticleCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends QuestionnaireCreateManyAndReturnArgs>(args?: SelectSubset<T, QuestionnaireCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Article.
-     * @param {ArticleDeleteArgs} args - Arguments to delete one Article.
+     * Delete a Questionnaire.
+     * @param {QuestionnaireDeleteArgs} args - Arguments to delete one Questionnaire.
      * @example
-     * // Delete one Article
-     * const Article = await prisma.article.delete({
+     * // Delete one Questionnaire
+     * const Questionnaire = await prisma.questionnaire.delete({
      *   where: {
-     *     // ... filter to delete one Article
+     *     // ... filter to delete one Questionnaire
      *   }
      * })
      * 
      */
-    delete<T extends ArticleDeleteArgs>(args: SelectSubset<T, ArticleDeleteArgs<ExtArgs>>): Prisma__ArticleClient<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends QuestionnaireDeleteArgs>(args: SelectSubset<T, QuestionnaireDeleteArgs<ExtArgs>>): Prisma__QuestionnaireClient<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Article.
-     * @param {ArticleUpdateArgs} args - Arguments to update one Article.
+     * Update one Questionnaire.
+     * @param {QuestionnaireUpdateArgs} args - Arguments to update one Questionnaire.
      * @example
-     * // Update one Article
-     * const article = await prisma.article.update({
+     * // Update one Questionnaire
+     * const questionnaire = await prisma.questionnaire.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2331,30 +2327,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends ArticleUpdateArgs>(args: SelectSubset<T, ArticleUpdateArgs<ExtArgs>>): Prisma__ArticleClient<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends QuestionnaireUpdateArgs>(args: SelectSubset<T, QuestionnaireUpdateArgs<ExtArgs>>): Prisma__QuestionnaireClient<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Articles.
-     * @param {ArticleDeleteManyArgs} args - Arguments to filter Articles to delete.
+     * Delete zero or more Questionnaires.
+     * @param {QuestionnaireDeleteManyArgs} args - Arguments to filter Questionnaires to delete.
      * @example
-     * // Delete a few Articles
-     * const { count } = await prisma.article.deleteMany({
+     * // Delete a few Questionnaires
+     * const { count } = await prisma.questionnaire.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends ArticleDeleteManyArgs>(args?: SelectSubset<T, ArticleDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends QuestionnaireDeleteManyArgs>(args?: SelectSubset<T, QuestionnaireDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Articles.
+     * Update zero or more Questionnaires.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ArticleUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {QuestionnaireUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Articles
-     * const article = await prisma.article.updateMany({
+     * // Update many Questionnaires
+     * const questionnaire = await prisma.questionnaire.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2364,14 +2360,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends ArticleUpdateManyArgs>(args: SelectSubset<T, ArticleUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends QuestionnaireUpdateManyArgs>(args: SelectSubset<T, QuestionnaireUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Articles and returns the data updated in the database.
-     * @param {ArticleUpdateManyAndReturnArgs} args - Arguments to update many Articles.
+     * Update zero or more Questionnaires and returns the data updated in the database.
+     * @param {QuestionnaireUpdateManyAndReturnArgs} args - Arguments to update many Questionnaires.
      * @example
-     * // Update many Articles
-     * const article = await prisma.article.updateManyAndReturn({
+     * // Update many Questionnaires
+     * const questionnaire = await prisma.questionnaire.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2380,8 +2376,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Articles and only return the `id`
-     * const articleWithIdOnly = await prisma.article.updateManyAndReturn({
+     * // Update zero or more Questionnaires and only return the `id`
+     * const questionnaireWithIdOnly = await prisma.questionnaire.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -2394,56 +2390,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends ArticleUpdateManyAndReturnArgs>(args: SelectSubset<T, ArticleUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends QuestionnaireUpdateManyAndReturnArgs>(args: SelectSubset<T, QuestionnaireUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Article.
-     * @param {ArticleUpsertArgs} args - Arguments to update or create a Article.
+     * Create or update one Questionnaire.
+     * @param {QuestionnaireUpsertArgs} args - Arguments to update or create a Questionnaire.
      * @example
-     * // Update or create a Article
-     * const article = await prisma.article.upsert({
+     * // Update or create a Questionnaire
+     * const questionnaire = await prisma.questionnaire.upsert({
      *   create: {
-     *     // ... data to create a Article
+     *     // ... data to create a Questionnaire
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Article we want to update
+     *     // ... the filter for the Questionnaire we want to update
      *   }
      * })
      */
-    upsert<T extends ArticleUpsertArgs>(args: SelectSubset<T, ArticleUpsertArgs<ExtArgs>>): Prisma__ArticleClient<$Result.GetResult<Prisma.$ArticlePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends QuestionnaireUpsertArgs>(args: SelectSubset<T, QuestionnaireUpsertArgs<ExtArgs>>): Prisma__QuestionnaireClient<$Result.GetResult<Prisma.$QuestionnairePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Articles.
+     * Count the number of Questionnaires.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ArticleCountArgs} args - Arguments to filter Articles to count.
+     * @param {QuestionnaireCountArgs} args - Arguments to filter Questionnaires to count.
      * @example
-     * // Count the number of Articles
-     * const count = await prisma.article.count({
+     * // Count the number of Questionnaires
+     * const count = await prisma.questionnaire.count({
      *   where: {
-     *     // ... the filter for the Articles we want to count
+     *     // ... the filter for the Questionnaires we want to count
      *   }
      * })
     **/
-    count<T extends ArticleCountArgs>(
-      args?: Subset<T, ArticleCountArgs>,
+    count<T extends QuestionnaireCountArgs>(
+      args?: Subset<T, QuestionnaireCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], ArticleCountAggregateOutputType>
+          : GetScalarType<T['select'], QuestionnaireCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Article.
+     * Allows you to perform aggregations operations on a Questionnaire.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ArticleAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {QuestionnaireAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2463,13 +2459,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends ArticleAggregateArgs>(args: Subset<T, ArticleAggregateArgs>): Prisma.PrismaPromise<GetArticleAggregateType<T>>
+    aggregate<T extends QuestionnaireAggregateArgs>(args: Subset<T, QuestionnaireAggregateArgs>): Prisma.PrismaPromise<GetQuestionnaireAggregateType<T>>
 
     /**
-     * Group by Article.
+     * Group by Questionnaire.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ArticleGroupByArgs} args - Group by arguments.
+     * @param {QuestionnaireGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2484,14 +2480,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends ArticleGroupByArgs,
+      T extends QuestionnaireGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: ArticleGroupByArgs['orderBy'] }
-        : { orderBy?: ArticleGroupByArgs['orderBy'] },
+        ? { orderBy: QuestionnaireGroupByArgs['orderBy'] }
+        : { orderBy?: QuestionnaireGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2540,20 +2536,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, ArticleGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetArticleGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, QuestionnaireGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetQuestionnaireGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Article model
+   * Fields of the Questionnaire model
    */
-  readonly fields: ArticleFieldRefs;
+  readonly fields: QuestionnaireFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Article.
+   * The delegate class that acts as a "Promise-like" for Questionnaire.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__ArticleClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__QuestionnaireClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2581,375 +2577,375 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Article model
+   * Fields of the Questionnaire model
    */
-  interface ArticleFieldRefs {
-    readonly id: FieldRef<"Article", 'Int'>
-    readonly numero: FieldRef<"Article", 'Int'>
-    readonly createdAt: FieldRef<"Article", 'DateTime'>
+  interface QuestionnaireFieldRefs {
+    readonly id: FieldRef<"Questionnaire", 'Int'>
+    readonly Question1: FieldRef<"Questionnaire", 'String'>
+    readonly createdAt: FieldRef<"Questionnaire", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * Article findUnique
+   * Questionnaire findUnique
    */
-  export type ArticleFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelect<ExtArgs> | null
+    select?: QuestionnaireSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * Filter, which Article to fetch.
+     * Filter, which Questionnaire to fetch.
      */
-    where: ArticleWhereUniqueInput
+    where: QuestionnaireWhereUniqueInput
   }
 
   /**
-   * Article findUniqueOrThrow
+   * Questionnaire findUniqueOrThrow
    */
-  export type ArticleFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelect<ExtArgs> | null
+    select?: QuestionnaireSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * Filter, which Article to fetch.
+     * Filter, which Questionnaire to fetch.
      */
-    where: ArticleWhereUniqueInput
+    where: QuestionnaireWhereUniqueInput
   }
 
   /**
-   * Article findFirst
+   * Questionnaire findFirst
    */
-  export type ArticleFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelect<ExtArgs> | null
+    select?: QuestionnaireSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * Filter, which Article to fetch.
+     * Filter, which Questionnaire to fetch.
      */
-    where?: ArticleWhereInput
+    where?: QuestionnaireWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Articles to fetch.
+     * Determine the order of Questionnaires to fetch.
      */
-    orderBy?: ArticleOrderByWithRelationInput | ArticleOrderByWithRelationInput[]
+    orderBy?: QuestionnaireOrderByWithRelationInput | QuestionnaireOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Articles.
+     * Sets the position for searching for Questionnaires.
      */
-    cursor?: ArticleWhereUniqueInput
+    cursor?: QuestionnaireWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Articles from the position of the cursor.
+     * Take `±n` Questionnaires from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Articles.
+     * Skip the first `n` Questionnaires.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Articles.
+     * Filter by unique combinations of Questionnaires.
      */
-    distinct?: ArticleScalarFieldEnum | ArticleScalarFieldEnum[]
+    distinct?: QuestionnaireScalarFieldEnum | QuestionnaireScalarFieldEnum[]
   }
 
   /**
-   * Article findFirstOrThrow
+   * Questionnaire findFirstOrThrow
    */
-  export type ArticleFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelect<ExtArgs> | null
+    select?: QuestionnaireSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * Filter, which Article to fetch.
+     * Filter, which Questionnaire to fetch.
      */
-    where?: ArticleWhereInput
+    where?: QuestionnaireWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Articles to fetch.
+     * Determine the order of Questionnaires to fetch.
      */
-    orderBy?: ArticleOrderByWithRelationInput | ArticleOrderByWithRelationInput[]
+    orderBy?: QuestionnaireOrderByWithRelationInput | QuestionnaireOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Articles.
+     * Sets the position for searching for Questionnaires.
      */
-    cursor?: ArticleWhereUniqueInput
+    cursor?: QuestionnaireWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Articles from the position of the cursor.
+     * Take `±n` Questionnaires from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Articles.
+     * Skip the first `n` Questionnaires.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Articles.
+     * Filter by unique combinations of Questionnaires.
      */
-    distinct?: ArticleScalarFieldEnum | ArticleScalarFieldEnum[]
+    distinct?: QuestionnaireScalarFieldEnum | QuestionnaireScalarFieldEnum[]
   }
 
   /**
-   * Article findMany
+   * Questionnaire findMany
    */
-  export type ArticleFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelect<ExtArgs> | null
+    select?: QuestionnaireSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * Filter, which Articles to fetch.
+     * Filter, which Questionnaires to fetch.
      */
-    where?: ArticleWhereInput
+    where?: QuestionnaireWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Articles to fetch.
+     * Determine the order of Questionnaires to fetch.
      */
-    orderBy?: ArticleOrderByWithRelationInput | ArticleOrderByWithRelationInput[]
+    orderBy?: QuestionnaireOrderByWithRelationInput | QuestionnaireOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Articles.
+     * Sets the position for listing Questionnaires.
      */
-    cursor?: ArticleWhereUniqueInput
+    cursor?: QuestionnaireWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Articles from the position of the cursor.
+     * Take `±n` Questionnaires from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Articles.
+     * Skip the first `n` Questionnaires.
      */
     skip?: number
-    distinct?: ArticleScalarFieldEnum | ArticleScalarFieldEnum[]
+    distinct?: QuestionnaireScalarFieldEnum | QuestionnaireScalarFieldEnum[]
   }
 
   /**
-   * Article create
+   * Questionnaire create
    */
-  export type ArticleCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelect<ExtArgs> | null
+    select?: QuestionnaireSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * The data needed to create a Article.
+     * The data needed to create a Questionnaire.
      */
-    data: XOR<ArticleCreateInput, ArticleUncheckedCreateInput>
+    data: XOR<QuestionnaireCreateInput, QuestionnaireUncheckedCreateInput>
   }
 
   /**
-   * Article createMany
+   * Questionnaire createMany
    */
-  export type ArticleCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Articles.
+     * The data used to create many Questionnaires.
      */
-    data: ArticleCreateManyInput | ArticleCreateManyInput[]
+    data: QuestionnaireCreateManyInput | QuestionnaireCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Article createManyAndReturn
+   * Questionnaire createManyAndReturn
    */
-  export type ArticleCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelectCreateManyAndReturn<ExtArgs> | null
+    select?: QuestionnaireSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * The data used to create many Articles.
+     * The data used to create many Questionnaires.
      */
-    data: ArticleCreateManyInput | ArticleCreateManyInput[]
+    data: QuestionnaireCreateManyInput | QuestionnaireCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Article update
+   * Questionnaire update
    */
-  export type ArticleUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelect<ExtArgs> | null
+    select?: QuestionnaireSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * The data needed to update a Article.
+     * The data needed to update a Questionnaire.
      */
-    data: XOR<ArticleUpdateInput, ArticleUncheckedUpdateInput>
+    data: XOR<QuestionnaireUpdateInput, QuestionnaireUncheckedUpdateInput>
     /**
-     * Choose, which Article to update.
+     * Choose, which Questionnaire to update.
      */
-    where: ArticleWhereUniqueInput
+    where: QuestionnaireWhereUniqueInput
   }
 
   /**
-   * Article updateMany
+   * Questionnaire updateMany
    */
-  export type ArticleUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Articles.
+     * The data used to update Questionnaires.
      */
-    data: XOR<ArticleUpdateManyMutationInput, ArticleUncheckedUpdateManyInput>
+    data: XOR<QuestionnaireUpdateManyMutationInput, QuestionnaireUncheckedUpdateManyInput>
     /**
-     * Filter which Articles to update
+     * Filter which Questionnaires to update
      */
-    where?: ArticleWhereInput
+    where?: QuestionnaireWhereInput
     /**
-     * Limit how many Articles to update.
+     * Limit how many Questionnaires to update.
      */
     limit?: number
   }
 
   /**
-   * Article updateManyAndReturn
+   * Questionnaire updateManyAndReturn
    */
-  export type ArticleUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: QuestionnaireSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * The data used to update Articles.
+     * The data used to update Questionnaires.
      */
-    data: XOR<ArticleUpdateManyMutationInput, ArticleUncheckedUpdateManyInput>
+    data: XOR<QuestionnaireUpdateManyMutationInput, QuestionnaireUncheckedUpdateManyInput>
     /**
-     * Filter which Articles to update
+     * Filter which Questionnaires to update
      */
-    where?: ArticleWhereInput
+    where?: QuestionnaireWhereInput
     /**
-     * Limit how many Articles to update.
+     * Limit how many Questionnaires to update.
      */
     limit?: number
   }
 
   /**
-   * Article upsert
+   * Questionnaire upsert
    */
-  export type ArticleUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelect<ExtArgs> | null
+    select?: QuestionnaireSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * The filter to search for the Article to update in case it exists.
+     * The filter to search for the Questionnaire to update in case it exists.
      */
-    where: ArticleWhereUniqueInput
+    where: QuestionnaireWhereUniqueInput
     /**
-     * In case the Article found by the `where` argument doesn't exist, create a new Article with this data.
+     * In case the Questionnaire found by the `where` argument doesn't exist, create a new Questionnaire with this data.
      */
-    create: XOR<ArticleCreateInput, ArticleUncheckedCreateInput>
+    create: XOR<QuestionnaireCreateInput, QuestionnaireUncheckedCreateInput>
     /**
-     * In case the Article was found with the provided `where` argument, update it with this data.
+     * In case the Questionnaire was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<ArticleUpdateInput, ArticleUncheckedUpdateInput>
+    update: XOR<QuestionnaireUpdateInput, QuestionnaireUncheckedUpdateInput>
   }
 
   /**
-   * Article delete
+   * Questionnaire delete
    */
-  export type ArticleDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelect<ExtArgs> | null
+    select?: QuestionnaireSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
     /**
-     * Filter which Article to delete.
+     * Filter which Questionnaire to delete.
      */
-    where: ArticleWhereUniqueInput
+    where: QuestionnaireWhereUniqueInput
   }
 
   /**
-   * Article deleteMany
+   * Questionnaire deleteMany
    */
-  export type ArticleDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Articles to delete
+     * Filter which Questionnaires to delete
      */
-    where?: ArticleWhereInput
+    where?: QuestionnaireWhereInput
     /**
-     * Limit how many Articles to delete.
+     * Limit how many Questionnaires to delete.
      */
     limit?: number
   }
 
   /**
-   * Article without action
+   * Questionnaire without action
    */
-  export type ArticleDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type QuestionnaireDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Article
+     * Select specific fields to fetch from the Questionnaire
      */
-    select?: ArticleSelect<ExtArgs> | null
+    select?: QuestionnaireSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Article
+     * Omit specific fields from the Questionnaire
      */
-    omit?: ArticleOmit<ExtArgs> | null
+    omit?: QuestionnaireOmit<ExtArgs> | null
   }
 
 
@@ -2977,13 +2973,13 @@ export namespace Prisma {
   export type ExampleScalarFieldEnum = (typeof ExampleScalarFieldEnum)[keyof typeof ExampleScalarFieldEnum]
 
 
-  export const ArticleScalarFieldEnum: {
+  export const QuestionnaireScalarFieldEnum: {
     id: 'id',
-    numero: 'numero',
+    Question1: 'Question1',
     createdAt: 'createdAt'
   };
 
-  export type ArticleScalarFieldEnum = (typeof ArticleScalarFieldEnum)[keyof typeof ArticleScalarFieldEnum]
+  export type QuestionnaireScalarFieldEnum = (typeof QuestionnaireScalarFieldEnum)[keyof typeof QuestionnaireScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -3113,48 +3109,48 @@ export namespace Prisma {
     updatedAt?: DateTimeWithAggregatesFilter<"Example"> | Date | string
   }
 
-  export type ArticleWhereInput = {
-    AND?: ArticleWhereInput | ArticleWhereInput[]
-    OR?: ArticleWhereInput[]
-    NOT?: ArticleWhereInput | ArticleWhereInput[]
-    id?: IntFilter<"Article"> | number
-    numero?: IntFilter<"Article"> | number
-    createdAt?: DateTimeFilter<"Article"> | Date | string
+  export type QuestionnaireWhereInput = {
+    AND?: QuestionnaireWhereInput | QuestionnaireWhereInput[]
+    OR?: QuestionnaireWhereInput[]
+    NOT?: QuestionnaireWhereInput | QuestionnaireWhereInput[]
+    id?: IntFilter<"Questionnaire"> | number
+    Question1?: StringFilter<"Questionnaire"> | string
+    createdAt?: DateTimeFilter<"Questionnaire"> | Date | string
   }
 
-  export type ArticleOrderByWithRelationInput = {
+  export type QuestionnaireOrderByWithRelationInput = {
     id?: SortOrder
-    numero?: SortOrder
+    Question1?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type ArticleWhereUniqueInput = Prisma.AtLeast<{
+  export type QuestionnaireWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: ArticleWhereInput | ArticleWhereInput[]
-    OR?: ArticleWhereInput[]
-    NOT?: ArticleWhereInput | ArticleWhereInput[]
-    numero?: IntFilter<"Article"> | number
-    createdAt?: DateTimeFilter<"Article"> | Date | string
+    AND?: QuestionnaireWhereInput | QuestionnaireWhereInput[]
+    OR?: QuestionnaireWhereInput[]
+    NOT?: QuestionnaireWhereInput | QuestionnaireWhereInput[]
+    Question1?: StringFilter<"Questionnaire"> | string
+    createdAt?: DateTimeFilter<"Questionnaire"> | Date | string
   }, "id">
 
-  export type ArticleOrderByWithAggregationInput = {
+  export type QuestionnaireOrderByWithAggregationInput = {
     id?: SortOrder
-    numero?: SortOrder
+    Question1?: SortOrder
     createdAt?: SortOrder
-    _count?: ArticleCountOrderByAggregateInput
-    _avg?: ArticleAvgOrderByAggregateInput
-    _max?: ArticleMaxOrderByAggregateInput
-    _min?: ArticleMinOrderByAggregateInput
-    _sum?: ArticleSumOrderByAggregateInput
+    _count?: QuestionnaireCountOrderByAggregateInput
+    _avg?: QuestionnaireAvgOrderByAggregateInput
+    _max?: QuestionnaireMaxOrderByAggregateInput
+    _min?: QuestionnaireMinOrderByAggregateInput
+    _sum?: QuestionnaireSumOrderByAggregateInput
   }
 
-  export type ArticleScalarWhereWithAggregatesInput = {
-    AND?: ArticleScalarWhereWithAggregatesInput | ArticleScalarWhereWithAggregatesInput[]
-    OR?: ArticleScalarWhereWithAggregatesInput[]
-    NOT?: ArticleScalarWhereWithAggregatesInput | ArticleScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Article"> | number
-    numero?: IntWithAggregatesFilter<"Article"> | number
-    createdAt?: DateTimeWithAggregatesFilter<"Article"> | Date | string
+  export type QuestionnaireScalarWhereWithAggregatesInput = {
+    AND?: QuestionnaireScalarWhereWithAggregatesInput | QuestionnaireScalarWhereWithAggregatesInput[]
+    OR?: QuestionnaireScalarWhereWithAggregatesInput[]
+    NOT?: QuestionnaireScalarWhereWithAggregatesInput | QuestionnaireScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Questionnaire"> | number
+    Question1?: StringWithAggregatesFilter<"Questionnaire"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"Questionnaire"> | Date | string
   }
 
   export type ExampleCreateInput = {
@@ -3206,42 +3202,42 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ArticleCreateInput = {
-    numero: number
+  export type QuestionnaireCreateInput = {
+    Question1: string
     createdAt?: Date | string
   }
 
-  export type ArticleUncheckedCreateInput = {
+  export type QuestionnaireUncheckedCreateInput = {
     id?: number
-    numero: number
+    Question1: string
     createdAt?: Date | string
   }
 
-  export type ArticleUpdateInput = {
-    numero?: IntFieldUpdateOperationsInput | number
+  export type QuestionnaireUpdateInput = {
+    Question1?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ArticleUncheckedUpdateInput = {
+  export type QuestionnaireUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    numero?: IntFieldUpdateOperationsInput | number
+    Question1?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ArticleCreateManyInput = {
+  export type QuestionnaireCreateManyInput = {
     id?: number
-    numero: number
+    Question1: string
     createdAt?: Date | string
   }
 
-  export type ArticleUpdateManyMutationInput = {
-    numero?: IntFieldUpdateOperationsInput | number
+  export type QuestionnaireUpdateManyMutationInput = {
+    Question1?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ArticleUncheckedUpdateManyInput = {
+  export type QuestionnaireUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    numero?: IntFieldUpdateOperationsInput | number
+    Question1?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3335,32 +3331,30 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
-  export type ArticleCountOrderByAggregateInput = {
+  export type QuestionnaireCountOrderByAggregateInput = {
     id?: SortOrder
-    numero?: SortOrder
+    Question1?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type ArticleAvgOrderByAggregateInput = {
+  export type QuestionnaireAvgOrderByAggregateInput = {
     id?: SortOrder
-    numero?: SortOrder
   }
 
-  export type ArticleMaxOrderByAggregateInput = {
+  export type QuestionnaireMaxOrderByAggregateInput = {
     id?: SortOrder
-    numero?: SortOrder
+    Question1?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type ArticleMinOrderByAggregateInput = {
+  export type QuestionnaireMinOrderByAggregateInput = {
     id?: SortOrder
-    numero?: SortOrder
+    Question1?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type ArticleSumOrderByAggregateInput = {
+  export type QuestionnaireSumOrderByAggregateInput = {
     id?: SortOrder
-    numero?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {

@@ -55,8 +55,8 @@ export const Qcm: React.FC<QcmProps> = ({titre,name,Choix1,Choix2,Choix3,Choix4,
         }
     }
   return (
-    <div >
-        <h1 className={`text-xl text-center text-white font-black p-4`}>{titre}</h1>
+    <div className='mb-20'>
+        <p className={`text-xl text-center text-white font-black p-4`}>{titre}</p>
 
         <div className='grid-cols-2 grid m-auto justify-center items-center h-full'>
             

@@ -127,9 +127,9 @@ exports.Prisma.ExampleScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.ArticleScalarFieldEnum = {
+exports.Prisma.QuestionnaireScalarFieldEnum = {
   id: 'id',
-  numero: 'numero',
+  Question1: 'Question1',
   createdAt: 'createdAt'
 };
 
@@ -146,7 +146,7 @@ exports.Prisma.QueryMode = {
 
 exports.Prisma.ModelName = {
   Example: 'Example',
-  Article: 'Article'
+  Questionnaire: 'Questionnaire'
 };
 
 /**

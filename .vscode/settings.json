@@ -1,3 +1,9 @@
 {
-    "WillLuke.nextjs.hasPrompted": true
+    "WillLuke.nextjs.hasPrompted": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false
+    }
 }
