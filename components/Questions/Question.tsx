@@ -50,12 +50,12 @@ export const Question: React.FC<QuestionProps> = ({ titre,description, name, typ
 
       {/* TEXT INPUT */}
       {type === 'text' && (
-        <Input type="text" name={name} className="border-2 border-gray-300 rounded-md p-2 m-4" />
+        <Input type="text" name={name} className="border-2 border-gray-300 w-[80%] rounded-md p-2 m-auto" required/>
       )}
 
       {/* RADIO */}
       {type === 'radio' && (
-        <RadioGroup className="space-y-2 flex w-full justify-around items-center">
+        <RadioGroup className="space-y-2 flex w-full justify-around items-center" name={name}>
           <div className="flex items-center space-x-2">
             <RadioGroupItem className='w-6 h-6 border-2' id={`${name}-1`} value={Choix1||''}  />
             <label htmlFor={`${name}-1`} className="text-2xl text-gray-700">
@@ -123,8 +123,8 @@ export const Question: React.FC<QuestionProps> = ({ titre,description, name, typ
 
       {/* SELECT */}
       {type === 'select' && (
-        <Select>
-          <SelectTrigger className="w-full bg-white border-2 border-gray-300 rounded-md p-2 m-4">
+        <Select name={name}>
+          <SelectTrigger className="bg-white border-2 border-gray-300 rounded-md p-2 w-[80%] m-auto">
             <SelectValue placeholder="Choisissez une option" />
           </SelectTrigger>
           <SelectContent>

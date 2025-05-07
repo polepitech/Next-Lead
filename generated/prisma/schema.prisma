@@ -17,7 +17,13 @@ datasource db {
 }
 
 model Questionnaire {
-  id        Int      @id @default(autoincrement())
+  id        Int    @id @default(autoincrement())
   Question1 String
+  Question2 String
+  Question3 String
+  Question4 String
+  Question5 String
+  Question6 String
+
   createdAt DateTime @default(now())
 }

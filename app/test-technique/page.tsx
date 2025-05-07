@@ -11,7 +11,12 @@ import { ScreenLoader } from '@/components/ScreenLoader';
 
 // Définir un schéma Zod pour valider les données du formulaire
 const questionnaireSchema = z.object({
-  Qcm: z.string().min(1, "Vous devez sélectionner une réponse."),
+    Question1: z.string().min(1, { message: "Vous devez choisir un nom" }),
+    Question2: z.string().min(1, { message: "Vous devez sélectionner au moins une langue" }),
+    Question3: z.string().min(1, { message: "Vous devez décrire votre expérience" }),
+    Question4: z.string().min(1, { message: "Vous devez fournir un nom d'école" }),
+    Question5: z.string().min(1, { message: "vous devez choisir une certification" }),
+    Question6: z.string().min(1, { message: "vous devez choisir un niveau de satisfaction" }),
 });
 
 const fuzz = Fugaz_One({
@@ -73,7 +78,7 @@ export default function TestTechnique() {
 
         <Qcm
           titre={'Quel est le nom de votre futur alternant?'}
-          name={'Qcm'}
+          name={'Question1'}
           Choix1={'Paul'}
           Choix2={'Williams'}
           Choix3={'Ion'}
@@ -83,7 +88,7 @@ export default function TestTechnique() {
 
         <Question
           titre={'Selon vous quelles langues parle votre futur alternant?'}
-          name={'Question'}
+          name={'Question2'}
           description={'Plusieurs choix possibles'}
           type={'checkbox'}
           Choix1={'Français'}
@@ -91,10 +96,26 @@ export default function TestTechnique() {
           Choix3={'Espagnol'}
           Choix4={'Portugais'}
         />
-        
+
+        <Question
+          titre={'Comment avez vous découvert votre nouvel alternant?'}
+          description="exprimez vous en quelques mots"
+          name={'Question3'}
+          type={'text'}
+        />
+        <Question
+          titre={'Quel est le nom de l\'école de votre alternant?'}
+          name={'Question4'}
+          type={'select'}
+          Choix1={'Epitech'} 
+          Choix2={'Web@cademie'}
+          Choix3={'IIM'}
+          Choix4={'Ecole 42'}
+        />
+
         <Question
           titre={"Quel certification à t'il obtenu en tant qu'ingénieur du son?"}
-          name={'radio'}
+          name={'Question5'}
           type={'radio'}
           Choix1={'📀'}
           Choix2={'💿'}
@@ -103,7 +124,7 @@ export default function TestTechnique() {
 
         <Question
           titre={'Comment avez vous trouvé ce questionnaire?'}
-          name={'range'}
+          name={'Question6'}
           type={'range'}
         />
         

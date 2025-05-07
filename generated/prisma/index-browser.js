@@ -130,6 +130,11 @@ exports.Prisma.ExampleScalarFieldEnum = {
 exports.Prisma.QuestionnaireScalarFieldEnum = {
   id: 'id',
   Question1: 'Question1',
+  Question2: 'Question2',
+  Question3: 'Question3',
+  Question4: 'Question4',
+  Question5: 'Question5',
+  Question6: 'Question6',
   createdAt: 'createdAt'
 };
 

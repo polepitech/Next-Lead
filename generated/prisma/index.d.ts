@@ -1969,18 +1969,33 @@ export namespace Prisma {
   export type QuestionnaireMinAggregateOutputType = {
     id: number | null
     Question1: string | null
+    Question2: string | null
+    Question3: string | null
+    Question4: string | null
+    Question5: string | null
+    Question6: string | null
     createdAt: Date | null
   }
 
   export type QuestionnaireMaxAggregateOutputType = {
     id: number | null
     Question1: string | null
+    Question2: string | null
+    Question3: string | null
+    Question4: string | null
+    Question5: string | null
+    Question6: string | null
     createdAt: Date | null
   }
 
   export type QuestionnaireCountAggregateOutputType = {
     id: number
     Question1: number
+    Question2: number
+    Question3: number
+    Question4: number
+    Question5: number
+    Question6: number
     createdAt: number
     _all: number
   }
@@ -1997,18 +2012,33 @@ export namespace Prisma {
   export type QuestionnaireMinAggregateInputType = {
     id?: true
     Question1?: true
+    Question2?: true
+    Question3?: true
+    Question4?: true
+    Question5?: true
+    Question6?: true
     createdAt?: true
   }
 
   export type QuestionnaireMaxAggregateInputType = {
     id?: true
     Question1?: true
+    Question2?: true
+    Question3?: true
+    Question4?: true
+    Question5?: true
+    Question6?: true
     createdAt?: true
   }
 
   export type QuestionnaireCountAggregateInputType = {
     id?: true
     Question1?: true
+    Question2?: true
+    Question3?: true
+    Question4?: true
+    Question5?: true
+    Question6?: true
     createdAt?: true
     _all?: true
   }
@@ -2102,6 +2132,11 @@ export namespace Prisma {
   export type QuestionnaireGroupByOutputType = {
     id: number
     Question1: string
+    Question2: string
+    Question3: string
+    Question4: string
+    Question5: string
+    Question6: string
     createdAt: Date
     _count: QuestionnaireCountAggregateOutputType | null
     _avg: QuestionnaireAvgAggregateOutputType | null
@@ -2127,28 +2162,48 @@ export namespace Prisma {
   export type QuestionnaireSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     Question1?: boolean
+    Question2?: boolean
+    Question3?: boolean
+    Question4?: boolean
+    Question5?: boolean
+    Question6?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["questionnaire"]>
 
   export type QuestionnaireSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     Question1?: boolean
+    Question2?: boolean
+    Question3?: boolean
+    Question4?: boolean
+    Question5?: boolean
+    Question6?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["questionnaire"]>
 
   export type QuestionnaireSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     Question1?: boolean
+    Question2?: boolean
+    Question3?: boolean
+    Question4?: boolean
+    Question5?: boolean
+    Question6?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["questionnaire"]>
 
   export type QuestionnaireSelectScalar = {
     id?: boolean
     Question1?: boolean
+    Question2?: boolean
+    Question3?: boolean
+    Question4?: boolean
+    Question5?: boolean
+    Question6?: boolean
     createdAt?: boolean
   }
 
-  export type QuestionnaireOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "Question1" | "createdAt", ExtArgs["result"]["questionnaire"]>
+  export type QuestionnaireOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "Question1" | "Question2" | "Question3" | "Question4" | "Question5" | "Question6" | "createdAt", ExtArgs["result"]["questionnaire"]>
 
   export type $QuestionnairePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Questionnaire"
@@ -2156,6 +2211,11 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       Question1: string
+      Question2: string
+      Question3: string
+      Question4: string
+      Question5: string
+      Question6: string
       createdAt: Date
     }, ExtArgs["result"]["questionnaire"]>
     composites: {}
@@ -2582,6 +2642,11 @@ export namespace Prisma {
   interface QuestionnaireFieldRefs {
     readonly id: FieldRef<"Questionnaire", 'Int'>
     readonly Question1: FieldRef<"Questionnaire", 'String'>
+    readonly Question2: FieldRef<"Questionnaire", 'String'>
+    readonly Question3: FieldRef<"Questionnaire", 'String'>
+    readonly Question4: FieldRef<"Questionnaire", 'String'>
+    readonly Question5: FieldRef<"Questionnaire", 'String'>
+    readonly Question6: FieldRef<"Questionnaire", 'String'>
     readonly createdAt: FieldRef<"Questionnaire", 'DateTime'>
   }
     
@@ -2976,6 +3041,11 @@ export namespace Prisma {
   export const QuestionnaireScalarFieldEnum: {
     id: 'id',
     Question1: 'Question1',
+    Question2: 'Question2',
+    Question3: 'Question3',
+    Question4: 'Question4',
+    Question5: 'Question5',
+    Question6: 'Question6',
     createdAt: 'createdAt'
   };
 
@@ -3115,12 +3185,22 @@ export namespace Prisma {
     NOT?: QuestionnaireWhereInput | QuestionnaireWhereInput[]
     id?: IntFilter<"Questionnaire"> | number
     Question1?: StringFilter<"Questionnaire"> | string
+    Question2?: StringFilter<"Questionnaire"> | string
+    Question3?: StringFilter<"Questionnaire"> | string
+    Question4?: StringFilter<"Questionnaire"> | string
+    Question5?: StringFilter<"Questionnaire"> | string
+    Question6?: StringFilter<"Questionnaire"> | string
     createdAt?: DateTimeFilter<"Questionnaire"> | Date | string
   }
 
   export type QuestionnaireOrderByWithRelationInput = {
     id?: SortOrder
     Question1?: SortOrder
+    Question2?: SortOrder
+    Question3?: SortOrder
+    Question4?: SortOrder
+    Question5?: SortOrder
+    Question6?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -3130,12 +3210,22 @@ export namespace Prisma {
     OR?: QuestionnaireWhereInput[]
     NOT?: QuestionnaireWhereInput | QuestionnaireWhereInput[]
     Question1?: StringFilter<"Questionnaire"> | string
+    Question2?: StringFilter<"Questionnaire"> | string
+    Question3?: StringFilter<"Questionnaire"> | string
+    Question4?: StringFilter<"Questionnaire"> | string
+    Question5?: StringFilter<"Questionnaire"> | string
+    Question6?: StringFilter<"Questionnaire"> | string
     createdAt?: DateTimeFilter<"Questionnaire"> | Date | string
   }, "id">
 
   export type QuestionnaireOrderByWithAggregationInput = {
     id?: SortOrder
     Question1?: SortOrder
+    Question2?: SortOrder
+    Question3?: SortOrder
+    Question4?: SortOrder
+    Question5?: SortOrder
+    Question6?: SortOrder
     createdAt?: SortOrder
     _count?: QuestionnaireCountOrderByAggregateInput
     _avg?: QuestionnaireAvgOrderByAggregateInput
@@ -3150,6 +3240,11 @@ export namespace Prisma {
     NOT?: QuestionnaireScalarWhereWithAggregatesInput | QuestionnaireScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Questionnaire"> | number
     Question1?: StringWithAggregatesFilter<"Questionnaire"> | string
+    Question2?: StringWithAggregatesFilter<"Questionnaire"> | string
+    Question3?: StringWithAggregatesFilter<"Questionnaire"> | string
+    Question4?: StringWithAggregatesFilter<"Questionnaire"> | string
+    Question5?: StringWithAggregatesFilter<"Questionnaire"> | string
+    Question6?: StringWithAggregatesFilter<"Questionnaire"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Questionnaire"> | Date | string
   }
 
@@ -3204,40 +3299,75 @@ export namespace Prisma {
 
   export type QuestionnaireCreateInput = {
     Question1: string
+    Question2: string
+    Question3: string
+    Question4: string
+    Question5: string
+    Question6: string
     createdAt?: Date | string
   }
 
   export type QuestionnaireUncheckedCreateInput = {
     id?: number
     Question1: string
+    Question2: string
+    Question3: string
+    Question4: string
+    Question5: string
+    Question6: string
     createdAt?: Date | string
   }
 
   export type QuestionnaireUpdateInput = {
     Question1?: StringFieldUpdateOperationsInput | string
+    Question2?: StringFieldUpdateOperationsInput | string
+    Question3?: StringFieldUpdateOperationsInput | string
+    Question4?: StringFieldUpdateOperationsInput | string
+    Question5?: StringFieldUpdateOperationsInput | string
+    Question6?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type QuestionnaireUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     Question1?: StringFieldUpdateOperationsInput | string
+    Question2?: StringFieldUpdateOperationsInput | string
+    Question3?: StringFieldUpdateOperationsInput | string
+    Question4?: StringFieldUpdateOperationsInput | string
+    Question5?: StringFieldUpdateOperationsInput | string
+    Question6?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type QuestionnaireCreateManyInput = {
     id?: number
     Question1: string
+    Question2: string
+    Question3: string
+    Question4: string
+    Question5: string
+    Question6: string
     createdAt?: Date | string
   }
 
   export type QuestionnaireUpdateManyMutationInput = {
     Question1?: StringFieldUpdateOperationsInput | string
+    Question2?: StringFieldUpdateOperationsInput | string
+    Question3?: StringFieldUpdateOperationsInput | string
+    Question4?: StringFieldUpdateOperationsInput | string
+    Question5?: StringFieldUpdateOperationsInput | string
+    Question6?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type QuestionnaireUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     Question1?: StringFieldUpdateOperationsInput | string
+    Question2?: StringFieldUpdateOperationsInput | string
+    Question3?: StringFieldUpdateOperationsInput | string
+    Question4?: StringFieldUpdateOperationsInput | string
+    Question5?: StringFieldUpdateOperationsInput | string
+    Question6?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3334,6 +3464,11 @@ export namespace Prisma {
   export type QuestionnaireCountOrderByAggregateInput = {
     id?: SortOrder
     Question1?: SortOrder
+    Question2?: SortOrder
+    Question3?: SortOrder
+    Question4?: SortOrder
+    Question5?: SortOrder
+    Question6?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -3344,12 +3479,22 @@ export namespace Prisma {
   export type QuestionnaireMaxOrderByAggregateInput = {
     id?: SortOrder
     Question1?: SortOrder
+    Question2?: SortOrder
+    Question3?: SortOrder
+    Question4?: SortOrder
+    Question5?: SortOrder
+    Question6?: SortOrder
     createdAt?: SortOrder
   }
 
   export type QuestionnaireMinOrderByAggregateInput = {
     id?: SortOrder
     Question1?: SortOrder
+    Question2?: SortOrder
+    Question3?: SortOrder
+    Question4?: SortOrder
+    Question5?: SortOrder
+    Question6?: SortOrder
     createdAt?: SortOrder
   }
 
