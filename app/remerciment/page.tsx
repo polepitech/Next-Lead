@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { gsap } from '@/lib/gsap';
 
 export default function Remerciment() {
   const [questionnaire, setQuestionnaire] = React.useState<Record<string, string> | null>(null);
@@ -31,6 +32,9 @@ export default function Remerciment() {
           console.error(error);
         });
     }
+    gsap.set('#body', {
+      background: 'white',
+    });
   }, [id]);
 
   if (!questionnaire) {
