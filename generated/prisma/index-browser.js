@@ -135,6 +135,8 @@ exports.Prisma.QuestionnaireScalarFieldEnum = {
   Question4: 'Question4',
   Question5: 'Question5',
   Question6: 'Question6',
+  Question7: 'Question7',
+  Question8: 'Question8',
   createdAt: 'createdAt'
 };
 

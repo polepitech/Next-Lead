@@ -60,8 +60,8 @@ export const Qcm: React.FC<QcmProps> = ({titre,name,Choix1,Choix2,Choix3,Choix4,
 
         <div className='grid-cols-2 grid m-auto justify-center items-center h-full'>
             
-            <div onClick={()=>handleClick(Choix1)} className="choix w-50 h-10 mt-8 bg-white text-black rounded-lg hover:bg-gray-200 cursor-pointer m-auto">
-                <input type="radio" id="A" name={name} value={Choix1} className="hidden peer" required />
+            <div onClick={()=>handleClick(Choix1)} className="choix w-30 sm:w-50 h-10 mt-8 bg-white text-black rounded-lg hover:bg-gray-200 cursor-pointer m-auto">
+                <input type="radio" id="A" name={name} value={Choix1} className="hidden peer" />
                 <label htmlFor="A" className="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-3 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
                     <div className="block w-full">
                         <div className="w-full text-lg font-semibold text-center">
@@ -71,8 +71,8 @@ export const Qcm: React.FC<QcmProps> = ({titre,name,Choix1,Choix2,Choix3,Choix4,
                 </label>
             </div>
 
-            <div onClick={()=>handleClick(Choix2)} className="choix w-50 h-10 mt-8 bg-white text-black rounded-lg hover:bg-gray-200 cursor-pointer m-auto">
-                <input type="radio" id="B" name={name} value={Choix2} className="hidden peer" required />
+            <div onClick={()=>handleClick(Choix2)} className="choix w-30 sm:w-50 h-10 mt-8 bg-white text-black rounded-lg hover:bg-gray-200 cursor-pointer m-auto">
+                <input type="radio" id="B" name={name} value={Choix2} className="hidden peer" />
                 <label htmlFor="B" className="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-3 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
                     <div className="block w-full">
                         <div className="w-full text-lg font-semibold text-center">
@@ -82,8 +82,8 @@ export const Qcm: React.FC<QcmProps> = ({titre,name,Choix1,Choix2,Choix3,Choix4,
                 </label>
             </div>
 
-            <div onClick={()=>handleClick(Choix3)} className="choix w-50 h-10 mt-8 bg-white text-black rounded-lg hover:bg-gray-200 cursor-pointer m-auto">
-                <input type="radio" id="C" name={name} value={Choix3} className="hidden peer" required />
+            <div onClick={()=>handleClick(Choix3)} className="choix w-30 sm:w-50 h-10 mt-8 bg-white text-black rounded-lg hover:bg-gray-200 cursor-pointer m-auto">
+                <input type="radio" id="C" name={name} value={Choix3} className="hidden peer" />
                 <label htmlFor="C" className="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-3 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
                     <div className="block w-full">
                         <div className="w-full text-lg font-semibold text-center">
@@ -93,8 +93,8 @@ export const Qcm: React.FC<QcmProps> = ({titre,name,Choix1,Choix2,Choix3,Choix4,
                 </label>
             </div>
 
-            <div onClick={()=>handleClick(Choix4)} className="choix w-50 h-10 mt-8 bg-white text-black rounded-lg hover:bg-gray-200 cursor-pointer m-auto">
-                <input type="radio" id="D" name={name} value={Choix4} className="hidden peer" required />
+            <div onClick={()=>handleClick(Choix4)} className="choix w-30 sm:w-50 h-10 mt-8 bg-white text-black rounded-lg hover:bg-gray-200 cursor-pointer m-auto">
+                <input type="radio" id="D" name={name} value={Choix4} className="hidden peer" />
                 <label htmlFor="D" className="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-3 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
                     <div className="block w-full">
                         <div className="w-full text-lg font-semibold text-center">

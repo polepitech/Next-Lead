@@ -1974,6 +1974,8 @@ export namespace Prisma {
     Question4: string | null
     Question5: string | null
     Question6: string | null
+    Question7: string | null
+    Question8: string | null
     createdAt: Date | null
   }
 
@@ -1985,6 +1987,8 @@ export namespace Prisma {
     Question4: string | null
     Question5: string | null
     Question6: string | null
+    Question7: string | null
+    Question8: string | null
     createdAt: Date | null
   }
 
@@ -1996,6 +2000,8 @@ export namespace Prisma {
     Question4: number
     Question5: number
     Question6: number
+    Question7: number
+    Question8: number
     createdAt: number
     _all: number
   }
@@ -2017,6 +2023,8 @@ export namespace Prisma {
     Question4?: true
     Question5?: true
     Question6?: true
+    Question7?: true
+    Question8?: true
     createdAt?: true
   }
 
@@ -2028,6 +2036,8 @@ export namespace Prisma {
     Question4?: true
     Question5?: true
     Question6?: true
+    Question7?: true
+    Question8?: true
     createdAt?: true
   }
 
@@ -2039,6 +2049,8 @@ export namespace Prisma {
     Question4?: true
     Question5?: true
     Question6?: true
+    Question7?: true
+    Question8?: true
     createdAt?: true
     _all?: true
   }
@@ -2137,6 +2149,8 @@ export namespace Prisma {
     Question4: string
     Question5: string
     Question6: string
+    Question7: string
+    Question8: string
     createdAt: Date
     _count: QuestionnaireCountAggregateOutputType | null
     _avg: QuestionnaireAvgAggregateOutputType | null
@@ -2167,6 +2181,8 @@ export namespace Prisma {
     Question4?: boolean
     Question5?: boolean
     Question6?: boolean
+    Question7?: boolean
+    Question8?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["questionnaire"]>
 
@@ -2178,6 +2194,8 @@ export namespace Prisma {
     Question4?: boolean
     Question5?: boolean
     Question6?: boolean
+    Question7?: boolean
+    Question8?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["questionnaire"]>
 
@@ -2189,6 +2207,8 @@ export namespace Prisma {
     Question4?: boolean
     Question5?: boolean
     Question6?: boolean
+    Question7?: boolean
+    Question8?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["questionnaire"]>
 
@@ -2200,10 +2220,12 @@ export namespace Prisma {
     Question4?: boolean
     Question5?: boolean
     Question6?: boolean
+    Question7?: boolean
+    Question8?: boolean
     createdAt?: boolean
   }
 
-  export type QuestionnaireOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "Question1" | "Question2" | "Question3" | "Question4" | "Question5" | "Question6" | "createdAt", ExtArgs["result"]["questionnaire"]>
+  export type QuestionnaireOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "Question1" | "Question2" | "Question3" | "Question4" | "Question5" | "Question6" | "Question7" | "Question8" | "createdAt", ExtArgs["result"]["questionnaire"]>
 
   export type $QuestionnairePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Questionnaire"
@@ -2216,6 +2238,8 @@ export namespace Prisma {
       Question4: string
       Question5: string
       Question6: string
+      Question7: string
+      Question8: string
       createdAt: Date
     }, ExtArgs["result"]["questionnaire"]>
     composites: {}
@@ -2647,6 +2671,8 @@ export namespace Prisma {
     readonly Question4: FieldRef<"Questionnaire", 'String'>
     readonly Question5: FieldRef<"Questionnaire", 'String'>
     readonly Question6: FieldRef<"Questionnaire", 'String'>
+    readonly Question7: FieldRef<"Questionnaire", 'String'>
+    readonly Question8: FieldRef<"Questionnaire", 'String'>
     readonly createdAt: FieldRef<"Questionnaire", 'DateTime'>
   }
     
@@ -3046,6 +3072,8 @@ export namespace Prisma {
     Question4: 'Question4',
     Question5: 'Question5',
     Question6: 'Question6',
+    Question7: 'Question7',
+    Question8: 'Question8',
     createdAt: 'createdAt'
   };
 
@@ -3190,6 +3218,8 @@ export namespace Prisma {
     Question4?: StringFilter<"Questionnaire"> | string
     Question5?: StringFilter<"Questionnaire"> | string
     Question6?: StringFilter<"Questionnaire"> | string
+    Question7?: StringFilter<"Questionnaire"> | string
+    Question8?: StringFilter<"Questionnaire"> | string
     createdAt?: DateTimeFilter<"Questionnaire"> | Date | string
   }
 
@@ -3201,6 +3231,8 @@ export namespace Prisma {
     Question4?: SortOrder
     Question5?: SortOrder
     Question6?: SortOrder
+    Question7?: SortOrder
+    Question8?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -3215,6 +3247,8 @@ export namespace Prisma {
     Question4?: StringFilter<"Questionnaire"> | string
     Question5?: StringFilter<"Questionnaire"> | string
     Question6?: StringFilter<"Questionnaire"> | string
+    Question7?: StringFilter<"Questionnaire"> | string
+    Question8?: StringFilter<"Questionnaire"> | string
     createdAt?: DateTimeFilter<"Questionnaire"> | Date | string
   }, "id">
 
@@ -3226,6 +3260,8 @@ export namespace Prisma {
     Question4?: SortOrder
     Question5?: SortOrder
     Question6?: SortOrder
+    Question7?: SortOrder
+    Question8?: SortOrder
     createdAt?: SortOrder
     _count?: QuestionnaireCountOrderByAggregateInput
     _avg?: QuestionnaireAvgOrderByAggregateInput
@@ -3245,6 +3281,8 @@ export namespace Prisma {
     Question4?: StringWithAggregatesFilter<"Questionnaire"> | string
     Question5?: StringWithAggregatesFilter<"Questionnaire"> | string
     Question6?: StringWithAggregatesFilter<"Questionnaire"> | string
+    Question7?: StringWithAggregatesFilter<"Questionnaire"> | string
+    Question8?: StringWithAggregatesFilter<"Questionnaire"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Questionnaire"> | Date | string
   }
 
@@ -3304,6 +3342,8 @@ export namespace Prisma {
     Question4: string
     Question5: string
     Question6: string
+    Question7?: string
+    Question8?: string
     createdAt?: Date | string
   }
 
@@ -3315,6 +3355,8 @@ export namespace Prisma {
     Question4: string
     Question5: string
     Question6: string
+    Question7?: string
+    Question8?: string
     createdAt?: Date | string
   }
 
@@ -3325,6 +3367,8 @@ export namespace Prisma {
     Question4?: StringFieldUpdateOperationsInput | string
     Question5?: StringFieldUpdateOperationsInput | string
     Question6?: StringFieldUpdateOperationsInput | string
+    Question7?: StringFieldUpdateOperationsInput | string
+    Question8?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3336,6 +3380,8 @@ export namespace Prisma {
     Question4?: StringFieldUpdateOperationsInput | string
     Question5?: StringFieldUpdateOperationsInput | string
     Question6?: StringFieldUpdateOperationsInput | string
+    Question7?: StringFieldUpdateOperationsInput | string
+    Question8?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3347,6 +3393,8 @@ export namespace Prisma {
     Question4: string
     Question5: string
     Question6: string
+    Question7?: string
+    Question8?: string
     createdAt?: Date | string
   }
 
@@ -3357,6 +3405,8 @@ export namespace Prisma {
     Question4?: StringFieldUpdateOperationsInput | string
     Question5?: StringFieldUpdateOperationsInput | string
     Question6?: StringFieldUpdateOperationsInput | string
+    Question7?: StringFieldUpdateOperationsInput | string
+    Question8?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3368,6 +3418,8 @@ export namespace Prisma {
     Question4?: StringFieldUpdateOperationsInput | string
     Question5?: StringFieldUpdateOperationsInput | string
     Question6?: StringFieldUpdateOperationsInput | string
+    Question7?: StringFieldUpdateOperationsInput | string
+    Question8?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -3469,6 +3521,8 @@ export namespace Prisma {
     Question4?: SortOrder
     Question5?: SortOrder
     Question6?: SortOrder
+    Question7?: SortOrder
+    Question8?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -3484,6 +3538,8 @@ export namespace Prisma {
     Question4?: SortOrder
     Question5?: SortOrder
     Question6?: SortOrder
+    Question7?: SortOrder
+    Question8?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -3495,6 +3551,8 @@ export namespace Prisma {
     Question4?: SortOrder
     Question5?: SortOrder
     Question6?: SortOrder
+    Question7?: SortOrder
+    Question8?: SortOrder
     createdAt?: SortOrder
   }
 

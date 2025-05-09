@@ -133,3 +133,7 @@
 .notion-topbar {
   display: none !important;
 }
+.question {
+  opacity: 1;
+  transform: translateX(0);
+}

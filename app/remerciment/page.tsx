@@ -51,6 +51,8 @@ export default function Remerciment() {
           <li><strong>Question 4 :</strong> {questionnaire.Question4}</li>
           <li><strong>Question 5 :</strong> {questionnaire.Question5}</li>
           <li><strong>Question 6 :</strong> {questionnaire.Question6}</li>
+          <li><strong>Question 7 :</strong> {questionnaire.Question7}</li>
+          <li><strong>Question 8 :</strong> {questionnaire.Question8}</li>
         </ul>
       </div>
     </div>

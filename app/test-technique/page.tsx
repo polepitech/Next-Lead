@@ -11,14 +11,16 @@ import { useRouter } from 'next/navigation';
 
 
 
-// Définir un schéma Zod pour valider les données du formulaire
+// Schéma Zod
 const questionnaireSchema = z.object({
-    Question1: z.string().min(1, { message: "Vous devez choisir un nom" }),
-    Question2: z.string().min(1, { message: "Vous devez sélectionner au moins une langue" }),
-    Question3: z.string().min(1, { message: "Vous devez décrire votre expérience" }),
-    Question4: z.string().min(1, { message: "Vous devez fournir un nom d'école" }),
-    Question5: z.string().min(1, { message: "vous devez choisir une certification" }),
-    Question6: z.string().min(1, { message: "vous devez choisir un niveau de satisfaction" }),
+    Question1: z.string().min(1, { message: "Vous devez choisir un nom d'alternant" }).default(""),
+    Question2: z.string().min(1, { message: "Vous devez sélectionner au moins une langue" }).default(""),
+    Question3: z.string().min(1, { message: "Vous devez fournir un nom d'école" }).default(""),
+    Question4: z.string().min(1, { message: "vous devez choisir une certification" }).default(""),
+    Question5: z.string().min(1, { message: "Vous devez choisir un age valide" }).default(""),
+    Question6: z.string().min(1, { message: "Vous devez écrire un commentaire" }).default(""),
+    Question7: z.string().min(1, { message: "Vous devez choisir votre nom" }).default(""),
+    Question8: z.string().min(1, { message: "vous devez choisir un niveau de satisfaction" }).default(""),
 });
 
 const fuzz = Fugaz_One({
@@ -48,6 +50,8 @@ export default function TestTechnique() {
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+
+    
 
     // Validation de Zod
     const result = questionnaireSchema.safeParse(data);
@@ -81,7 +85,7 @@ export default function TestTechnique() {
       <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center w-full h-full">
 
         <Qcm
-          titre={'Quel est le nom de votre futur alternant?'}
+          titre={'Quel est le nom de votre futur alternant ?'}
           name={'Question1'}
           Choix1={'Paul'}
           Choix2={'Williams'}
@@ -91,7 +95,7 @@ export default function TestTechnique() {
         />
 
         <Question
-          titre={'Selon vous quelles langues parle votre futur alternant?'}
+          titre={'Selon vous, quelles langues parle votre futur alternant?'}
           name={'Question2'}
           description={'Plusieurs choix possibles'}
           type={'checkbox'}
@@ -101,15 +105,10 @@ export default function TestTechnique() {
           Choix4={'Portugais'}
         />
 
+        
         <Question
-          titre={'Comment avez vous découvert votre nouvel alternant?'}
-          description="exprimez vous en quelques mots"
+          titre={'Quel est le nom de l\'école de votre alternant ?'}
           name={'Question3'}
-          type={'text'}
-        />
-        <Question
-          titre={'Quel est le nom de l\'école de votre alternant?'}
-          name={'Question4'}
           type={'select'}
           Choix1={'Epitech'} 
           Choix2={'Web@cademie'}
@@ -118,8 +117,8 @@ export default function TestTechnique() {
         />
 
         <Question
-          titre={"Quel certification à t'il obtenu en tant qu'ingénieur du son?"}
-          name={'Question5'}
+          titre={"Quelle certification a-t-il obtenue en tant qu'ingénieur du son?"}
+          name={'Question4'}
           type={'radio'}
           Choix1={'📀'}
           Choix2={'💿'}
@@ -127,16 +126,39 @@ export default function TestTechnique() {
         />
 
         <Question
-          titre={'Comment avez vous trouvé ce questionnaire?'}
+          titre={'Quel âge a votre futur alternant ?'}
+          name={'Question5'}
+          type={'number'}
+        />
+
+        <Question
+          titre={'Comment avez-vous découvert votre futur alternant?'}
           name={'Question6'}
+          type={'textarea'}
+          description={'Exprimez-vous en quelques mots'}
+        />
+
+        <Question
+          titre={'Comment vous appelez-vous ?'}
+          description=""
+          name={'Question7'}
+          type={'text'}
+        />
+
+        <Question
+          titre={'Comment avez-vous trouvé ce questionnaire ?'}
+          name={'Question8'}
           type={'range'}
         />
+
+
+       
         
         <div className="spacing m-20"></div>
-        <p className="text-white text-center">Vérifiez bien vos réponses et envoyez le formulaire</p>
+        <p className="text-white text-center">Vérifiez bien vos réponses et envoyez le formulaire.</p>
 
         {error && <p className="text-red-500 text-center">{error}</p>}
-        <Button type="submit" className="m-10">Submit</Button>
+        <Button type="submit" className="m-10">Envoyer </Button>
       </form>
     </div>
   );

@@ -14,16 +14,16 @@ export default function Header() {
     <header className="bg-background z-10 flex min-h-24 flex-col justify-center p-4 shadow-md shadow-gray-100">
       <div className="flex items-center justify-between gap-2">
         <NLLogo className="h-auto w-64" />
-        <Link
-          href={isTestTechnique ? "/" : "/test-technique"}
+        <a
+          href={isTestTechnique ? "/" : "/test-technique"} 
           className={cn(
             buttonVariants({
               variant: "default",
               size: "default_responsive",
             }),
             "font-clash text-md w-fit font-medium",
-          )}
-        >
+          )} 
+           >
           {isTestTechnique ? (
             <>
               <ArrowLeft className="size-4" />
@@ -36,8 +36,8 @@ export default function Header() {
               </span>
               <ArrowRight className="size-4" />
             </>
-          )}
-        </Link>
+          )} 
+        </a>
       </div>
     </header>
   );

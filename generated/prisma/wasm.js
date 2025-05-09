@@ -107,6 +107,8 @@ exports.Prisma.QuestionnaireScalarFieldEnum = {
   Question4: 'Question4',
   Question5: 'Question5',
   Question6: 'Question6',
+  Question7: 'Question7',
+  Question8: 'Question8',
   createdAt: 'createdAt'
 };
 
@@ -167,22 +169,21 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": null
+        "value": "postgresql://neondb_owner:npg_2nlOZejdtEi8@ep-little-dust-abf9gqdc-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require"
       }
     }
   },
-  "inlineSchema": "model Example {\n  id        String   @id @default(uuid())\n  name      String\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\ngenerator client {\n  provider        = \"prisma-client-js\"\n  previewFeatures = [\"prismaSchemaFolder\", \"driverAdapters\"]\n  output          = \"../../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Questionnaire {\n  id        Int    @id @default(autoincrement())\n  Question1 String\n  Question2 String\n  Question3 String\n  Question4 String\n  Question5 String\n  Question6 String\n\n  createdAt DateTime @default(now())\n}\n",
-  "inlineSchemaHash": "67fb547958803a613c4bee73f7671fcc2dadc73276e6b321133f88d29d00fdbd",
+  "inlineSchema": "model Example {\n  id        String   @id @default(uuid())\n  name      String\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\ngenerator client {\n  provider        = \"prisma-client-js\"\n  previewFeatures = [\"prismaSchemaFolder\", \"driverAdapters\"]\n  output          = \"../../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Questionnaire {\n  id        Int    @id @default(autoincrement())\n  Question1 String\n  Question2 String\n  Question3 String\n  Question4 String\n  Question5 String\n  Question6 String\n  Question7 String @default(\"No\")\n  Question8 String @default(\"No\")\n\n  createdAt DateTime @default(now())\n}\n",
+  "inlineSchemaHash": "f3ce1071d1cd6ce629fd1642bb0e3c549b44a486845a60562810727043865a05",
   "copyEngine": true
 }
 config.dirname = '/'
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"Example\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Questionnaire\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"Question1\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question2\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question3\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question4\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question5\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question6\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"Example\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Questionnaire\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"Question1\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question2\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question3\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question4\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question5\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question6\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question7\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Question8\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.engineWasm = {
   getRuntime: async () => require('./query_engine_bg.js'),

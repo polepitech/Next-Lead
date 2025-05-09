@@ -17,6 +17,9 @@ model Questionnaire {
   Question4   String
   Question5   String
   Question6   String
+  Question7   String @default("No")
+  Question8   String @default("No")
+
 
   createdAt   DateTime @default(now())
 }

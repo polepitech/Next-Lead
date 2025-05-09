@@ -13,7 +13,7 @@ import { gsap } from '@/lib/gsap';
 interface QuestionProps {
   titre: string;
   description?: string;
-  type: 'text' | 'radio' | 'checkbox' | 'select' | 'range';
+  type: 'text' | 'radio' | 'checkbox' | 'select' | 'range' | 'number' | 'textarea';
   name: string;
   Choix1?: string;
   Choix2?: string;
@@ -24,7 +24,7 @@ interface QuestionProps {
 export const Question: React.FC<QuestionProps> = ({ titre,description, name, type, Choix1, Choix2, Choix3, Choix4 }) => {
 
     useEffect(() => {
-        gsap.from(`#question-${name}`, {
+        const animation = gsap.from(`#question-${name}`, {
             scrollTrigger: {
             trigger: `#question-${name}`,
             start: 'top 90%',
@@ -37,6 +37,10 @@ export const Question: React.FC<QuestionProps> = ({ titre,description, name, typ
             duration: 1,
             ease: 'power2.Out',
         });
+        return () => {
+          animation.kill(); 
+        };
+      
     }, [name])
     
 
@@ -50,7 +54,7 @@ export const Question: React.FC<QuestionProps> = ({ titre,description, name, typ
 
       {/* TEXT INPUT */}
       {type === 'text' && (
-        <Input type="text" name={name} className="border-2 border-gray-300 w-[80%] rounded-md p-2 m-auto" required/>
+        <Input type="text" name={name} className="border-2 border-gray-300 w-[80%] rounded-md p-2 m-auto" />
       )}
 
       {/* RADIO */}
@@ -142,6 +146,19 @@ export const Question: React.FC<QuestionProps> = ({ titre,description, name, typ
           <p className='p-4 text-2xl'>💩</p>
             <Slider className='m-auto' name={name} defaultValue={[50]} max={100} step={1}/>
           <p className='p-4 text-2xl'>🔥</p>
+        </div>
+      )}
+
+       {/* <NUMBER> */}
+       {type === 'number' && (
+        <div className='flex justify-center  w-[70%] md:w-[50%] m-auto'>
+            <Input className='p-3' name={name} type='number' placeholder='18'/>
+        </div>
+      )}
+        {/* <Text Area> */}
+        {type === 'textarea' && (
+        <div className='flex justify-center   m-auto'>
+            <textarea className='p-3 w-[60vw] md:w-[40vw]' rows={5} name={name} placeholder='Ecrivez ici...'/>
         </div>
       )}
 
