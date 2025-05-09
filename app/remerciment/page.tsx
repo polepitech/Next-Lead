@@ -49,14 +49,14 @@ export default function Remerciment() {
       <div className="mt-20">
         <h2 className="text-2xl font-bold">Vos réponses :</h2>
         <ul className="list-disc list-inside">
-          <li><strong>Question 1 :</strong> {questionnaire.Question1}</li>
-          <li><strong>Question 2 :</strong> {questionnaire.Question2}</li>
-          <li><strong>Question 3 :</strong> {questionnaire.Question3}</li>
-          <li><strong>Question 4 :</strong> {questionnaire.Question4}</li>
-          <li><strong>Question 5 :</strong> {questionnaire.Question5}</li>
-          <li><strong>Question 6 :</strong> {questionnaire.Question6}</li>
-          <li><strong>Question 7 :</strong> {questionnaire.Question7}</li>
-          <li><strong>Question 8 :</strong> {questionnaire.Question8}</li>
+          <li className={questionnaire.Question1 !== 'Paul' ? 'text-red-500' : "text-green-500"}><strong>Question 1 :</strong> {questionnaire.Question1}</li>
+          <li className={questionnaire.Question2 !== 'Français' ? 'text-red-500' : "text-green-500"}><strong>Question 2 :</strong> {questionnaire.Question2}</li>
+          <li className={questionnaire.Question3 !== 'Web@cademie' ? 'text-red-500' : "text-green-500"}><strong>Question 3 :</strong> {questionnaire.Question3}</li>
+          <li className={questionnaire.Question4 !== '💎' ? 'text-red-500' : "text-green-500"}><strong>Question 4 :</strong> {questionnaire.Question4}</li>
+          <li className={questionnaire.Question5 !== '26' ? 'text-red-500' : "text-green-500"}><strong>Question 5 :</strong> {questionnaire.Question5}</li>
+          <li ><strong>Question 6 :</strong> {questionnaire.Question6}</li>
+          <li ><strong>Question 7 :</strong> {questionnaire.Question7}</li>
+          <li ><strong>Question 8 :</strong> {questionnaire.Question8}</li>
         </ul>
       </div>
     </div>
