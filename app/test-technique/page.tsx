@@ -117,7 +117,7 @@ export default function TestTechnique() {
         />
 
         <Question
-          titre={"Quelle certification a-t-il obtenue en tant qu'ingénieur du son?"}
+          titre={"Quelle certification a-t-il obtenu en tant qu'ingénieur du son?"}
           name={'Question4'}
           type={'radio'}
           Choix1={'📀'}
